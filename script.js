@@ -86,53 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function formatNumberField(inputField, format) {
-        inputField.addEventListener('input', function() {
-            let value = inputField.value.replace(/[^\d]/g, '');
-            if (value === '') {
-                inputField.value = '';
-                return;
-            }
-            value = parseInt(value, 10);
-            if (isNaN(value) || value < 0) {
-                value = 0;
-            }
-            inputField.value = value.toLocaleString('en-US') + format;
-        });
-
-        inputField.addEventListener('blur', function() {
-            let value = inputField.value.replace(/[^\d]/g, '');
-            if (value === '') {
-                inputField.value = '';
-                return;
-            }
-            value = parseInt(value, 10);
-            if (isNaN(value) || value < 0) {
-                value = 0;
-            }
-            inputField.value = value + format;
-        });
-
-        inputField.addEventListener('focus', function() {
-            let value = inputField.value.replace(/[^\d]/g, '');
-            inputField.value = value;
-        });
-    }
-
-    function enforceMinMax(inputField) {
-        inputField.addEventListener('input', function() {
-            let value = parseInt(inputField.value, 10);
-            let min = parseInt(inputField.min, 10);
-            let max = parseInt(inputField.max, 10);
-
-            if (isNaN(value) || value < min) {
-                inputField.value = min;
-            } else if (value > max) {
-                inputField.value = max;
-            }
-        });
-    }
-
     document.querySelectorAll('.next-btn').forEach(button => {
         button.addEventListener('click', function() {
             if (currentStep === steps.length - 2) {
@@ -214,20 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     showStep(currentStep);
 
-    // Format number fields
-    formatNumberField(document.getElementById('commuteKm'), ' km');
-    formatNumberField(document.getElementById('commuteHome'), ' %');
-    formatNumberField(document.getElementById('commuteTrain'), ' %');
-    formatNumberField(document.getElementById('commuteOV'), ' %');
-    formatNumberField(document.getElementById('commuteCar'), ' %');
-    formatNumberField(document.getElementById('commuteEV'), ' %');
-    formatNumberField(document.getElementById('commuteMove'), ' %');
-
-    // Enforce min and max values
-    document.querySelectorAll('input[type="number"]').forEach(field => {
-        enforceMinMax(field);
-    });
-
     // Update heating label based on selection
     const heatingTypeField = document.getElementById('heatingType');
     const heatingUseLabel = document.querySelector('label[for="heatingUse"]');
@@ -238,6 +177,24 @@ document.addEventListener('DOMContentLoaded', function() {
             heatingUseLabel.textContent = 'How many litres of heating oil did you use in the last year?';
         } else {
             heatingUseLabel.textContent = 'How many kWh of heating did you use in the last year?';
+        }
+    });
+});
+
+$(document).ready(function() {
+    // Prevent negative numbers and non-numeric characters
+    $('input[type="number"]').on('input', function() {
+        let value = $(this).val().replace(/[^\d]/g, ''); // Remove non-numeric characters
+        value = value === '' ? '' : parseInt(value, 10); // Convert to integer
+        $(this).val(value);
+    });
+
+    // Enforce min value
+    $('input[type="number"]').on('blur', function() {
+        let value = parseInt($(this).val(), 10);
+        let min = parseInt($(this).attr('min'), 10);
+        if (isNaN(value) || value < min) {
+            $(this).val(min);
         }
     });
 });
