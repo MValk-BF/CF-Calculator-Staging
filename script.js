@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             inputField.value = value + format;
         });
+
+        inputField.addEventListener('focus', function() {
+            let value = inputField.value.replace(/[^\d]/g, '');
+            inputField.value = value;
+        });
     }
 
     function enforceMinMax(inputField) {
