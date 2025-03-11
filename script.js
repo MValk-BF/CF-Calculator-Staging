@@ -165,4 +165,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     showStep(currentStep);
+
+    function formatNumberField(input) {
+        let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
+        if (value) {
+            input.value = parseInt(value).toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 }) + ' km';
+        }
+    }
+
+    function formatPercentageField(input) {
+        let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
+        if (value) {
+            input.value = parseInt(value).toLocaleString('en-US', { minimumIntegerDigits: 2 }) + ' %';
+        }
+    }
+
 });
+
