@@ -44,28 +44,28 @@
             <div class="step" id="step-3">
                 <h2>Commuting</h2>
                 <label for="commuteKm">How many kilometres do you live from your workplace? <span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></label>
-                <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15" required>
+                <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15 %" required oninput="formatNumberField(this)">
                 <p>On average, what percentage of the time do you:</p>
                 <div class="percentage-fields">
                     <div>
                         <label for="commuteHome">Work from home?</label>
-                        <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 10" required>
+                        <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 10" required oninput="formatPercentageField(this)">
                     </div>
                     <div>
                         <label for="commuteTrain">Take the train to work?</label>
-                        <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 10" required>
+                        <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 10" required oninput="formatPercentageField(this)">
                     </div>
                     <div>
                         <label for="commuteOV">Take the bus/tram to work?</label>
-                        <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 10" required>
+                        <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 10" required oninput="formatPercentageField(this)">
                     </div>
                     <div>
                         <label for="commuteCar">Take the petrol/diesel car to work?</label>
-                        <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 10" required>
+                        <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 10" required oninput="formatPercentageField(this)">
                     </div>
                     <div>
                         <label for="commuteEV">Take the electric car to work?</label>
-                        <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 10" required>
+                        <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 10" required oninput="formatPercentageField(this)">
                     </div>
                     <div>
                         <label for="commuteMove">Walk / cycle to work?</label>
