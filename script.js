@@ -86,6 +86,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function formatNumberField(inputField, format) {
+        inputField.addEventListener('input', function() {
+            let value = inputField.value.replace(/[^\d]/g, '');
+            if (value === '') {
+                inputField.value = '';
+                return;
+            }
+            value = parseInt(value, 10);
+            if (isNaN(value) || value < 0) {
+                value = 0;
+            }
+            inputField.value = value.toLocaleString('en-US') + format;
+        });
+
+        inputField.addEventListener('blur', function() {
+            let value = inputField.value.replace(/[^\d]/g, '');
+            if (value === '') {
+                inputField.value = '';
+                return;
+            }
+            value = parseInt(value, 10);
+            if (isNaN(value) || value < 0) {
+                value = 0;
+            }
+            inputField.value = value + format;
+        });
+    }
+
+    function enforceMinMax(inputField) {
+        inputField.addEventListener('input', function() {
+            let value = parseInt(inputField.value, 10);
+            let min = parseInt(inputField.min, 10);
+            let max = parseInt(inputField.max, 10);
+
+            if (isNaN(value) || value < min) {
+                inputField.value = min;
+            } else if (value > max) {
+                inputField.value = max;
+            }
+        });
+    }
+
     document.querySelectorAll('.next-btn').forEach(button => {
         button.addEventListener('click', function() {
             if (currentStep === steps.length - 2) {
@@ -102,12 +144,12 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         fillEmptyFields();
-       
+
         // Get the current date and time
         const currentDate = new Date();
         const formattedDate = currentDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
         const formattedTime = currentDate.toTimeString().split(' ')[0]; // Format: HH:MM:SS
-        
+
         // Gather form data
         const formData = {
             email: document.getElementById('email').value,
@@ -148,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function submitHiddenForm() {
             const hiddenForm = document.getElementById('hiddenZapierForm');
-    
+
             Object.keys(formData).forEach(key => {
                 if (hiddenForm[key]) {
                     hiddenForm[key].value = formData[key];
@@ -157,31 +199,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
             hiddenForm.submit();
 
-        // Notify the parent window to redirect
-        window.parent.postMessage('formSubmitted', '*');
-    }
+            // Notify the parent window to redirect
+            window.parent.postMessage('formSubmitted', '*');
+        }
+
         // Submit the hidden form
         submitHiddenForm();
     });
 
     showStep(currentStep);
 
-});
+    // Format number fields
+    formatNumberField(document.getElementById('commuteKm'), ' km');
+    formatNumberField(document.getElementById('commuteHome'), ' %');
+    formatNumberField(document.getElementById('commuteTrain'), ' %');
+    formatNumberField(document.getElementById('commuteOV'), ' %');
+    formatNumberField(document.getElementById('commuteCar'), ' %');
+    formatNumberField(document.getElementById('commuteEV'), ' %');
+    formatNumberField(document.getElementById('commuteMove'), ' %');
 
-$(document).ready(function() {
-    // Format number fields (e.g., "0.000 km")
-    $('#commuteKm').on('input', function() {
-        var $this = $(this);
-        var input = $this.val().replace(/[\D\s\._\-]+/g, ""); // Remove non-numeric characters
-        input = input ? parseInt(input, 10) : 0;
-        $this.val(input === 0 ? "" : input.toLocaleString("en-US") + " km");
+    // Enforce min and max values
+    document.querySelectorAll('input[type="number"]').forEach(field => {
+        enforceMinMax(field);
     });
 
-    // Format percentage fields (e.g., "00 %")
-    $('#commuteHome, #commuteTrain, #commuteOV, #commuteCar, #commuteEV, #commuteMove').on('input', function() {
-        var $this = $(this);
-        var input = $this.val().replace(/[\D\s\._\-]+/g, ""); // Remove non-numeric characters
-        input = input ? parseInt(input, 10) : 0;
-        $this.val(input === 0 ? "" : input + " %");
+    // Update heating label based on selection
+    const heatingTypeField = document.getElementById('heatingType');
+    const heatingUseLabel = document.querySelector('label[for="heatingUse"]');
+    heatingTypeField.addEventListener('change', function() {
+        if (heatingTypeField.value === 'Natural gas') {
+            heatingUseLabel.textContent = 'How many m³ of natural gas did you use in the last year?';
+        } else if (heatingTypeField.value === 'Heating oil') {
+            heatingUseLabel.textContent = 'How many litres of heating oil did you use in the last year?';
+        } else {
+            heatingUseLabel.textContent = 'How many kWh of heating did you use in the last year?';
+        }
     });
 });
