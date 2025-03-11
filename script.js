@@ -166,19 +166,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     showStep(currentStep);
 
-    function formatNumberField(input) {
-        let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
-        if (value) {
-            input.value = parseInt(value).toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 }) + ' km';
-        }
-    }
-
-    function formatPercentageField(input) {
-        let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
-        if (value) {
-            input.value = parseInt(value).toLocaleString('en-US', { minimumIntegerDigits: 2 }) + ' %';
-        }
-    }
-
 });
 
+$(document).ready(function() {
+    // Format number fields (e.g., "0.000 km")
+    $('#commuteKm').on('input', function() {
+        var $this = $(this);
+        var input = $this.val().replace(/[\D\s\._\-]+/g, ""); // Remove non-numeric characters
+        input = input ? parseInt(input, 10) : 0;
+        $this.val(input === 0 ? "" : input.toLocaleString("en-US") + " km");
+    });
+
+    // Format percentage fields (e.g., "00 %")
+    $('#commuteHome, #commuteTrain, #commuteOV, #commuteCar, #commuteEV, #commuteMove').on('input', function() {
+        var $this = $(this);
+        var input = $this.val().replace(/[\D\s\._\-]+/g, ""); // Remove non-numeric characters
+        input = input ? parseInt(input, 10) : 0;
+        $this.val(input === 0 ? "" : input + " %");
+    });
+});
