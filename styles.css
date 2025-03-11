@@ -1,0 +1,135 @@
+body {
+    font-family: "Outfit", serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+}
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000000;
+    width: 600px;
+    height: 600px;
+}
+.form-container h2 {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.form-container .demo-message {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-container input, .form-container select {
+    width: 582px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-left: hidden;
+    border-right: hidden;
+    border-radius: 0px;
+    border-top: hidden;
+    border-bottom-color: #d9d9d9;
+    border-bottom-width: thin;
+}
+.form-container .percentage-fields {
+    display: flex;
+    flex-direction: column;
+}
+.form-container .percentage-fields div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-container .inline-fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-container .percentage-fields input {
+    width: 40%;
+}
+.form-container .inline-fields input {
+    width: 40%;
+}
+.form-container .checkbox-field input {
+    width: 30px;
+}
+.form-container .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.form-container .login-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.form-container .button-container button {
+    width: 120px;
+    padding: 10px;
+    background-image: linear-gradient(to right, #bdddee, #b6e7b8);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form-container .login-button-container button {
+    width: 120px;
+    padding: 10px;
+    background-image: linear-gradient(to right, #bdddee, #b6e7b8);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form-container .button-container .prev-btn {
+    background-image: linear-gradient(to right, #fff5b0, #ffaff4);
+}
+.form-container .button-container button:hover {
+    opacity: 0.9;
+}
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+.info-icon {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+}
+.info-icon:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    min-width: 250px;
+    z-index: 10;
+}
+.warning-message {
+    color: red;
+    margin-bottom: 20px;
+    display: none;
+}
