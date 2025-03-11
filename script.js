@@ -188,13 +188,4 @@ $(document).ready(function() {
         value = value === '' ? '' : parseInt(value, 10); // Convert to integer
         $(this).val(value);
     });
-
-    // Enforce min value
-    $('input[type="number"]').on('blur', function() {
-        let value = parseInt($(this).val(), 10);
-        let min = parseInt($(this).attr('min'), 10);
-        if (isNaN(value) || value < min) {
-            $(this).val(min);
-        }
-    });
 });
