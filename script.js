@@ -147,12 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTime: formattedTime
         };
 
+        // Debugging: Log form data
+        console.log('Form Data:', formData);
+
         // Populate hidden form fields
         Object.keys(formData).forEach(key => {
             if (hiddenForm[key]) {
                 hiddenForm[key].value = formData[key];
             }
         });
+
+        // Debugging: Log hidden form data
+        console.log('Hidden Form Data:', new FormData(hiddenForm));
 
         // Explicitly submit the hidden form
         hiddenForm.submit();
