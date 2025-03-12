@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('carbon-footprint-form');
-    const hiddenForm = document.getElementById('hiddenZapierForm');
     const steps = document.querySelectorAll('.step');
     let currentStep = 0;
 
@@ -146,22 +145,10 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionDate: formattedDate,
             submissionTime: formattedTime
         };
-
-        // Populate hidden form fields
-        Object.keys(formData).forEach(key => {
-            if (hiddenForm[key]) {
-                hiddenForm[key].value = formData[key];
-            }
-        });
-
-        // Explicitly submit the hidden form
-        hiddenForm.submit();
         
-        // Add an event listener to the hidden form's submit event
-            setTimeout(function() {
-                console.log('Sending postMessage to parent window');
-                window.parent.postMessage('formSubmitted', '*');
-            }, 1000); // Delay the redirect to ensure form submission completes
+        // Send form data to parent window
+        window.parent.postMessage({ type: 'formData', data: formData }, '*');
+
     });
 
     showStep(currentStep);
