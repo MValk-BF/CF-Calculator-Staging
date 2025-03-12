@@ -146,15 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTime: formattedTime
         };
 
-        // Populate hidden form fields
-        Object.keys(formData).forEach(key => {
-            if (hiddenForm[key]) {
-                hiddenForm[key].value = formData[key];
-            }
-        });
+        function submitHiddenForm() {
+            const hiddenForm = document.getElementById('hiddenZapierForm');
 
-        // Explicitly submit the hidden form
-        hiddenForm.submit();
+            Object.keys(formData).forEach(key => {
+                if (hiddenForm[key]) {
+                    hiddenForm[key].value = formData[key];
+                }
+            });
+
+            hiddenForm.submit();
 
             // Notify the parent window to redirect
             window.parent.postMessage('formSubmitted', '*');
