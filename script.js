@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hiddenForm.submit();
 
         // Notify the parent window to redirect
-        window.parent.postMessage('formSubmitted', '*');
+        // window.parent.postMessage('formSubmitted', '*');
     });
 
     showStep(currentStep);
