@@ -154,13 +154,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Add an event listener to the hidden form's submit event
+        hiddenForm.addEventListener('submit', function() {
+            setTimeout(function() {
+                window.parent.postMessage('formSubmitted', '*');
+            }, 1000); // Delay the redirect to ensure form submission completes
+        }, { once: true });
+
         // Explicitly submit the hidden form
         hiddenForm.submit();
-
-        // Introduce a delay before sending the redirect message
-        setTimeout(function() {
-            window.parent.postMessage('formSubmitted', '*');
-        }, 3000); // Delay for 3000 milliseconds
     });
 
     showStep(currentStep);
