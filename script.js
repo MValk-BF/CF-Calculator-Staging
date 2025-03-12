@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('carbon-footprint-form');
+    const hiddenForm = document.getElementById('hiddenZapierForm');
     const steps = document.querySelectorAll('.step');
     let currentStep = 0;
 
