@@ -146,19 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTime: formattedTime
         };
 
-            Object.keys(formData).forEach(key => {
-                if (hiddenForm[key]) {
-                    hiddenForm[key].value = formData[key];
-                }
+        // Populate hidden form fields
+        Object.keys(formData).forEach(key => {
+            if (hiddenForm[key]) {
+                hiddenForm[key].value = formData[key];
+            }
+        });
 
-            hiddenForm.submit();
+        // Explicitly submit the hidden form
+        hiddenForm.submit();
 
-            // Notify the parent window to redirect
-            window.parent.postMessage('formSubmitted', '*');
-        }
-
-        // Submit the hidden form
-        submitHiddenForm();
+        // Notify the parent window to redirect
+        window.parent.postMessage('formSubmitted', '*');
     });
 
     showStep(currentStep);
