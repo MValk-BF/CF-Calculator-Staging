@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Introduce a delay before sending the redirect message
         setTimeout(function() {
             window.parent.postMessage('formSubmitted', '*');
-        }, 500); // Delay for 500 milliseconds
+        }, 3000); // Delay for 3000 milliseconds
     });
 
     showStep(currentStep);
