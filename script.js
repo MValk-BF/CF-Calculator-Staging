@@ -158,12 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
         hiddenForm.submit();
         
         // Add an event listener to the hidden form's submit event
-        hiddenForm.addEventListener('submit', function() {
             setTimeout(function() {
                 console.log('Sending postMessage to parent window');
                 window.parent.postMessage('formSubmitted', '*');
             }, 1000); // Delay the redirect to ensure form submission completes
-        }, { once: true });
     });
 
     showStep(currentStep);
