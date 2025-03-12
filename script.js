@@ -154,6 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Explicitly submit the hidden form
+        hiddenForm.submit();
+        
         // Add an event listener to the hidden form's submit event
         hiddenForm.addEventListener('submit', function() {
             setTimeout(function() {
@@ -161,9 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.parent.postMessage('formSubmitted', '*');
             }, 1000); // Delay the redirect to ensure form submission completes
         }, { once: true });
-
-        // Explicitly submit the hidden form
-        hiddenForm.submit();
     });
 
     showStep(currentStep);
