@@ -147,9 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTime: formattedTime
         };
 
-        // Debugging: Log form data
-        console.log('Form Data:', formData);
-
         // Populate hidden form fields
         Object.keys(formData).forEach(key => {
             if (hiddenForm[key]) {
@@ -157,14 +154,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Debugging: Log hidden form data
-        console.log('Hidden Form Data:', new FormData(hiddenForm));
-
         // Explicitly submit the hidden form
         hiddenForm.submit();
 
-        // Notify the parent window to redirect
-        window.parent.postMessage('formSubmitted', '*');
+        // Introduce a delay before sending the redirect message
+        setTimeout(function() {
+            window.parent.postMessage('formSubmitted', '*');
+        }, 500); // Delay for 500 milliseconds
     });
 
     showStep(currentStep);
