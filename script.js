@@ -146,14 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
             submissionTime: formattedTime
         };
 
-        function submitHiddenForm() {
-            const hiddenForm = document.getElementById('hiddenZapierForm');
-
             Object.keys(formData).forEach(key => {
                 if (hiddenForm[key]) {
                     hiddenForm[key].value = formData[key];
                 }
-            });
 
             hiddenForm.submit();
 
