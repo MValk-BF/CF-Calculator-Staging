@@ -62,9 +62,17 @@ body {
 .form-container .inline-fields input {
     width: 40%;
 }
-.form-container .checkbox-field input {
-    width: 30px;
+.form-container .radio-group div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+.form-container .radio-field input {
+    width: 16px;
+    height: 16px;
+}
+
 .form-container .button-container {
     display: flex;
     justify-content: space-between;
