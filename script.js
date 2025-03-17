@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
             largeElec: document.getElementById('largeElec').value,
             furniture: document.getElementById('furniture').value,
             shareData: document.getElementById('shareData').checked,
+            shareEmail: document.getElementById('shareEmail').checked,
             submissionDate: formattedDate,
             submissionTime: formattedTime
         };
