@@ -62,17 +62,9 @@ body {
 .form-container .inline-fields input {
     width: 40%;
 }
-.form-container .radio-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .form-container .radio-field input {
     width: 16px;
-    height: 16px;
 }
-
 .form-container .button-container {
     display: flex;
     justify-content: space-between;
