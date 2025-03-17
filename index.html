@@ -202,15 +202,21 @@
             </div>
             <div class="step" id="step-9">
                 <h2>Submit your responses</h2>
-                <p>All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared. If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
-                    <label for="shareData" class="checkbox-field">
-                        <input type="checkbox" id="shareData" name="shareData">
-                        I agree that my replies may be shared with my employer anonymously.
+                <p>All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared. <br>If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
+                <div class="radio-group">
+                    <label for="shareNone" class="radio-field">
+                        <input type="radio" id="shareNone" name="shareOption" value="none" checked>
+                        I do not want to share my replies with my company.
                     </label>
-                     <label for="shareEmail" class="checkbox-field">
-                        <input type="checkbox" id="shareEmail" name="shareEmail">
-                        I agree that my email may be shared with my company.
-                    </label>  
+                    <label for="shareAnonymous" class="radio-field">
+                        <input type="radio" id="shareAnonymous" name="shareOption" value="anonymous">
+                        I agree that my replies may be shared with my company anonymously.
+                    </label>
+                    <label for="shareIdentifiable" class="radio-field">
+                        <input type="radio" id="shareIdentifiable" name="shareOption" value="identifiable">
+                        I agree that my replies and my email may be shared with my company.
+                    </label>
+                </div>
                 <div class="button-container">
                     <button type="button" class="prev-btn">Previous</button>
                     <button type="submit">Submit</button>
@@ -252,8 +258,7 @@
         <input type="hidden" name="smallElec">
         <input type="hidden" name="largeElec">
         <input type="hidden" name="furniture">
-        <input type="hidden" name="shareData">
-        <input type="hidden" name="shareEmail">
+        <input type="hidden" name="shareOption">
     </form>
     <script src="script.js"></script>
 </body>
