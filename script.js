@@ -141,8 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
             smallElec: document.getElementById('smallElec').value,
             largeElec: document.getElementById('largeElec').value,
             furniture: document.getElementById('furniture').value,
-            shareData: document.getElementById('shareData').checked,
-            shareEmail: document.getElementById('shareEmail').checked,
+            shareOption: document.querySelector('input[name="shareOption"]:checked').value,
             submissionDate: formattedDate,
             submissionTime: formattedTime
         };
