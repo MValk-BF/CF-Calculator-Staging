@@ -70,9 +70,13 @@ body {
     justify-content: space-between;
     margin-top: 20px;
 }
-.form-container .spacer {
+.form-container .top-spacer {
     display: flex;
-    flex: 1 1 0%;
+    align-items: flex-start;
+}
+.form-container .bottom-spacer {
+    display: flex;
+    align-items: flex-end;
 }
 .form-container .progress-container {
     display: flex;
@@ -116,7 +120,9 @@ body {
     display: none;
 }
 .step.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .info-icon {
     font-size: 14px;
