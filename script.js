@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validateStep(stepIndex) {
         let isValid = true;
-        const percentageFields = document.querySelectorAll('.step#step-3 input[type="number"]');
+        const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
         const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
         const emailField = document.getElementById('email');
         const consentOption = document.querySelector('input[name="consentOption"]:checked');
