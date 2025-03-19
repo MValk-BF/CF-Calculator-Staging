@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
         const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
         const emailField = document.getElementById('email');
-        const consentOption = document.querySelector('input[name="consentOption"]:checked');
+        const shareOption = document.querySelector('input[name="shareOption"]:checked');
 
         // Email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (stepIndex === 9) {
-            if (!consentOption) {
+            if (!shareOption) {
                 document.getElementById('consent-warning').style.display = 'block';
                 isValid = false;
             } else {
