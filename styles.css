@@ -70,6 +70,15 @@ body {
     justify-content: space-between;
     margin-top: 20px;
 }
+.form-container .spacer {
+    display: flex;
+    flex: 1 1 0%;
+}
+.form-container .progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 .form-container .login-button-container {
     display: flex;
     justify-content: center;
