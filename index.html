@@ -36,236 +36,252 @@
                 </div>
                 <div class="bottom-spacer">
                     <div class="progress-container">
-                        <p>1/9</p>
+                        <p>1 of 9</p>
                     </div>
                 </div>
             </div>
             <div class="step" id="step-2">
-                <h2>Personal Air Travel</h2>
-                <label for="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
-                <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
+                <div class="top-spacer">
+                    <h2>Personal Air Travel</h2>
+                    <label for="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
+                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>2/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>2 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-3">
-                <h2>Commuting</h2>
-                <label for="commuteKm">How many kilometres do you live from your workplace? <span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></label>
-                <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15" required>
-                <p>On average, what percentage of the time do you:</p>
-                <div class="percentage-fields">
-                    <div>
-                        <label for="commuteHome">Work from home?</label>
-                        <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 10" required>
+                <div class="top-spacer">
+                    <h2>Commuting</h2>
+                    <label for="commuteKm">How many kilometres do you live from your workplace? <span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></label>
+                    <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15" required>
+                    <p>On average, what percentage of the time do you:</p>
+                    <div class="percentage-fields">
+                        <div>
+                            <label for="commuteHome">Work from home?</label>
+                            <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
+                        <div>
+                            <label for="commuteTrain">Take the train to work?</label>
+                            <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
+                        <div>
+                            <label for="commuteOV">Take the bus/tram to work?</label>
+                            <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
+                        <div>
+                            <label for="commuteCar">Take the petrol/diesel car to work?</label>
+                            <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
+                        <div>
+                            <label for="commuteEV">Take the electric car to work?</label>
+                            <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
+                        <div>
+                            <label for="commuteMove">Walk / cycle to work?</label>
+                            <input type="number" id="commuteMove" name="commuteMove" min="0" max="100" placeholder="e.g. 10" required>
+                        </div>
                     </div>
-                    <div>
-                        <label for="commuteTrain">Take the train to work?</label>
-                        <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 10" required>
-                    </div>
-                    <div>
-                        <label for="commuteOV">Take the bus/tram to work?</label>
-                        <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 10" required>
-                    </div>
-                    <div>
-                        <label for="commuteCar">Take the petrol/diesel car to work?</label>
-                        <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 10" required>
-                    </div>
-                    <div>
-                        <label for="commuteEV">Take the electric car to work?</label>
-                        <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 10" required>
-                    </div>
-                    <div>
-                        <label for="commuteMove">Walk / cycle to work?</label>
-                        <input type="number" id="commuteMove" name="commuteMove" min="0" max="100" placeholder="e.g. 10" required>
+                    <div class="warning-message" id="percentage-warning">Make sure that the sum of all percentages is 100%</div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
                     </div>
                 </div>
-                <div class="warning-message" id="percentage-warning">Make sure that the sum of all percentages is 100%</div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>3/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>3 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-4">
-                <h2>Other Business Transportation</h2>
-                <p>How many kilometres did you travel in the last year for business by:<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
-                <div class="inline-fields">
-                    <label for="bustravelTrain">Train?</label>
-                    <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
+                <div class="top-spacer">
+                    <h2>Other Business Transportation</h2>
+                    <p>How many kilometres did you travel in the last year for business by:<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
+                    <div class="inline-fields">
+                        <label for="bustravelTrain">Train?</label>
+                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">    
+                        <label for="bustravelOV">Bus/tram?</label>
+                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelCar">Petrol/diesel car?</label>
+                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelEV">Electric car?</label>
+                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="inline-fields">    
-                    <label for="bustravelOV">Bus/tram?</label>
-                    <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="bustravelCar">Petrol/diesel car?</label>
-                    <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="bustravelEV">Electric car?</label>
-                    <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>4/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>4 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-5">
-                <h2>Other Personal Transportation</h2>
-                <p>How many kilometres did you travel in the last year for personal reasons by:</p>
-                <div class="inline-fields">
-                    <label for="perstravelTrain">Train?</label>
-                    <input type="number" id="perstravelTrain" name="perstravelTrain" min="0" placeholder="e.g. 15" required>
+                <div class="top-spacer">
+                    <h2>Other Personal Transportation</h2>
+                    <p>How many kilometres did you travel in the last year for personal reasons by:</p>
+                    <div class="inline-fields">
+                        <label for="perstravelTrain">Train?</label>
+                        <input type="number" id="perstravelTrain" name="perstravelTrain" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="perstravelOV">Bus/tram?</label>
+                        <input type="number" id="perstravelOV" name="perstravelOV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="perstravelCar">Petrol/diesel car?</label>
+                        <input type="number" id="perstravelCar" name="perstravelCar" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="perstravelEV">Electric car?</label>
+                        <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="inline-fields">
-                    <label for="perstravelOV">Bus/tram?</label>
-                    <input type="number" id="perstravelOV" name="perstravelOV" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="perstravelCar">Petrol/diesel car?</label>
-                    <input type="number" id="perstravelCar" name="perstravelCar" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="perstravelEV">Electric car?</label>
-                    <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 15" required>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>5/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>5 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-6">
-                <h2>Food</h2>
-                <p>On average, how many days per week do you eat:</p>
-                <div class="inline-fields">
-                    <label for="vegan">Vegan?</label>
-                    <input type="number" id="vegan" name="vegan" min="0" max="7" placeholder="e.g. 2" required>
+                <div class="top-spacer">
+                    <h2>Food</h2>
+                    <p>On average, how many days per week do you eat:</p>
+                    <div class="inline-fields">
+                        <label for="vegan">Vegan?</label>
+                        <input type="number" id="vegan" name="vegan" min="0" max="7" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="veggie">Vegetarian?</label>
+                        <input type="number" id="veggie" name="veggie" min="0" max="7" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="fish">Fish?</label>
+                        <input type="number" id="fish" name="fish" min="0" max="7" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="meat">Meat?</label>
+                        <input type="number" id="meat" name="meat" min="0" max="7" placeholder="e.g. 1" required>
+                    </div>
+                    <div class="warning-message" id="food-warning">Make sure that you select a total of 7 days</div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="inline-fields">
-                    <label for="veggie">Vegetarian?</label>
-                    <input type="number" id="veggie" name="veggie" min="0" max="7" placeholder="e.g. 2" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="fish">Fish?</label>
-                    <input type="number" id="fish" name="fish" min="0" max="7" placeholder="e.g. 2" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="meat">Meat?</label>
-                    <input type="number" id="meat" name="meat" min="0" max="7" placeholder="e.g. 1" required>
-                </div>
-                <div class="warning-message" id="food-warning">Make sure that you select a total of 7 days</div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>6/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>6 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-7">
-                <h2>Housing</h2>
-                <label for="heatingType">What type of heating do you use?</label>
-                <select id="heatingType" name="heatingType" required>
-                    <option value="Natural gas">Natural gas</option>
-                    <option value="Electricity">Electricity</option>
-                    <option value="Heating oil">Heating oil</option>
-                    <option value="Biofuels">Biofuels</option>
-                    <option value="Other or don't know">Other / don't know</option>
-                </select>
-                <label for="heatingUse">How many m3 of natural gas did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average natural gas consumption for heating in the EU is 547 m³ per person.">ℹ️</span></label>
-                <input type="number" id="heatingUse" name="heatingUse" min="0" placeholder="e.g. 100" required>
-                <label for="elecUse">How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh/year.">ℹ️</span></label>
-                <input type="number" id="elecUse" name="elecUse" min="0" placeholder="e.g. 5000" required>
-                <label for="elecType">What % of that electricity is green?</label>
-                <input type="number" id="elecType" name="elecType" min="0" max="100" placeholder="e.g. 50" required>
-                <label for="householdSize">How many people are in your household?</label>
-                <input type="number" id="householdSize" name="householdSize" min="1" max="10" value="1" placeholder="e.g. 2" required>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
+                <div class="top-spacer">
+                    <h2>Housing</h2>
+                    <label for="heatingType">What type of heating do you use?</label>
+                    <select id="heatingType" name="heatingType" required>
+                        <option value="Natural gas">Natural gas</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Heating oil">Heating oil</option>
+                        <option value="Biofuels">Biofuels</option>
+                        <option value="Other or don't know">Other / don't know</option>
+                    </select>
+                    <label for="heatingUse">How many m3 of natural gas did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average natural gas consumption for heating in the EU is 547 m³ per person.">ℹ️</span></label>
+                    <input type="number" id="heatingUse" name="heatingUse" min="0" placeholder="e.g. 100" required>
+                    <label for="elecUse">How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh/year.">ℹ️</span></label>
+                    <input type="number" id="elecUse" name="elecUse" min="0" placeholder="e.g. 5000" required>
+                    <label for="elecType">What % of that electricity is green?</label>
+                    <input type="number" id="elecType" name="elecType" min="0" max="100" placeholder="e.g. 50" required>
+                    <label for="householdSize">How many people are in your household?</label>
+                    <input type="number" id="householdSize" name="householdSize" min="1" max="10" value="1" placeholder="e.g. 2" required>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>7/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>7 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-8">
-                <h2>Consumption</h2>
-                <p>How many new items did you purchase in the last year from each of these categories?</p>
-                <div class="inline-fields">
-                    <label for="clothing">Clothing:</label>
-                    <input type="number" id="clothing" name="clothing" min="0" placeholder="e.g. 10" required>
+                <div class="top-spacer">
+                    <h2>Consumption</h2>
+                    <p>How many new items did you purchase in the last year from each of these categories?</p>
+                    <div class="inline-fields">
+                        <label for="clothing">Clothing:</label>
+                        <input type="number" id="clothing" name="clothing" min="0" placeholder="e.g. 10" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="smallElec">Small electronics:</label>
+                        <input type="number" id="smallElec" name="smallElec" min="0" placeholder="e.g. 5" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="largeElec">Large electronics / appliances:</label>
+                        <input type="number" id="largeElec" name="largeElec" min="0" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="furniture">Furniture:</label>
+                        <input type="number" id="furniture" name="furniture" min="0" placeholder="e.g. 2" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                 </div>
-                <div class="inline-fields">
-                    <label for="smallElec">Small electronics:</label>
-                    <input type="number" id="smallElec" name="smallElec" min="0" placeholder="e.g. 5" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="largeElec">Large electronics / appliances:</label>
-                    <input type="number" id="largeElec" name="largeElec" min="0" placeholder="e.g. 2" required>
-                </div>
-                <div class="inline-fields">
-                    <label for="furniture">Furniture:</label>
-                    <input type="number" id="furniture" name="furniture" min="0" placeholder="e.g. 2" required>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="button" class="next-btn">Next</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>8/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>8 of 9</p>
+                    </div>
                 </div>
             </div>
             <div class="step" id="step-9">
-                <h2>Submit your responses</h2>
-                <p>All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared. <br><br>If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
-                <div class="radio-group">
-                    <label for="shareNone" class="radio-field">
-                        <input type="radio" id="shareNone" name="shareOption" value="none">
-                        I do not want to share my replies with my company.
-                    </label>
-                    <label for="shareAnonymous" class="radio-field">
-                        <input type="radio" id="shareAnonymous" name="shareOption" value="anonymous">
-                        I agree that my replies may be shared with my company anonymously.
-                    </label>
-                    <label for="shareIdentifiable" class="radio-field">
-                        <input type="radio" id="shareIdentifiable" name="shareOption" value="identifiable">
-                        I agree that my replies and my email may be shared with my company.
-                    </label>
+                <div class="top-spacer">
+                    <h2>Submit your responses</h2>
+                    <p>All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared. <br><br>If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
+                    <div class="radio-group">
+                        <label for="shareNone" class="radio-field">
+                            <input type="radio" id="shareNone" name="shareOption" value="none">
+                            I do not want to share my replies with my company.
+                        </label>
+                        <label for="shareAnonymous" class="radio-field">
+                            <input type="radio" id="shareAnonymous" name="shareOption" value="anonymous">
+                            I agree that my replies may be shared with my company anonymously.
+                        </label>
+                        <label for="shareIdentifiable" class="radio-field">
+                            <input type="radio" id="shareIdentifiable" name="shareOption" value="identifiable">
+                            I agree that my replies and my email may be shared with my company.
+                        </label>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="submit">Submit</button>
+                    </div>
                 </div>
-                <div class="button-container">
-                    <button type="button" class="prev-btn">Previous</button>
-                    <button type="submit">Submit</button>
-                </div>
-                <div class="spacer">
-                </div>
-                <div class="progress-container">
-                    <p>9/9</p>
+                <div class="bottom-spacer">
+                    <div class="progress-container">
+                        <p>9 of 9</p>
+                    </div>
                 </div>
             </div>
         </form>
