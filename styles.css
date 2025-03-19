@@ -72,16 +72,21 @@ body {
 }
 .form-container .top-spacer {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .form-container .bottom-spacer {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .form-container .progress-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+}
+.form-container .progress-container p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 .form-container .login-button-container {
     display: flex;
@@ -123,6 +128,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 600px;
 }
 .info-icon {
     font-size: 14px;
