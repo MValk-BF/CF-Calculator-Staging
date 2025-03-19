@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const percentageFields = document.querySelectorAll('.step#step-3 input[type="number"]');
         const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
         const emailField = document.getElementById('email');
+        const consentOption = document.querySelector('input[name="consentOption"]:checked');
 
         // Email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('email-warning').style.display = 'none';
             }
         }
-        if (stepIndex === 3) {
+        if (stepIndex === 1) {
             let totalPercentage = 0;
             percentageFields.forEach(field => {
                 if (field.id !== 'commuteKm') {
@@ -69,7 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('food-warning').style.display = 'none';
             }
         }
-
+        
+        if (stepIndex === 9) {
+            if (!consentOption) {
+                document.getElementById('consent-warning').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('consent-warning').style.display = 'none';
+            }
+        }
+        
         return isValid;
     }
 
