@@ -30,53 +30,6 @@
             </div>
             <div class="step" id="step-1">
                 <div class="top-spacer">
-                    <h2>Business Flying</h2>
-                    <label for="busFlights">How many hours did you spend on a plane in the last year for business?</label>
-                    <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 15" required>
-                    <div class="button-container">
-                        <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>
-                    </div>
-                </div>
-                <div class="bottom-spacer">
-                    <div class="progress-container">
-                        <p>1 of 9</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step" id="step-2">
-                <div class="top-spacer">
-                    <h2>Other Business Travel</h2>
-                    <p>How many kilometres did you travel for business in the last year, by each of these travel methods?<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
-                    <div class="inline-fields">
-                        <label for="bustravelTrain">Train:</label>
-                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">    
-                        <label for="bustravelOV">Bus/tram:</label>
-                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">
-                        <label for="bustravelCar">Petrol/diesel car:</label>
-                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">
-                        <label for="bustravelEV">Electric car:</label>
-                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="button-container">
-                        <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>
-                    </div>
-                </div>
-                <div class="bottom-spacer">
-                    <div class="progress-container">
-                        <p>2 of 9</p>
-                    </div>
-                </div>
-            </div>
-            <div class="step" id="step-3">
-                <div class="top-spacer">
                     <h2>Commuting</h2>
                     <label for="commuteKm">How many kilometres do you live from your workplace? <span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></label>
                     <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15" required>
@@ -108,12 +61,59 @@
                         </div>
                     </div>
                     <div class="warning-message" id="percentage-warning">Make sure that the sum of all percentages is 100%</div>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
+                    <div class="progress-container">
+                        <p>1 of 9</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step-2">
+                <div class="top-spacer">
+                    <h2>Business Flying</h2>
+                    <label for="busFlights">How many hours did you spend on a plane in the last year for business?</label>
+                    <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 15" required>
                 </div>
                 <div class="bottom-spacer">
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                    <div class="progress-container">
+                        <p>2 of 9</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step-3">
+                <div class="top-spacer">
+                    <h2>Other Business Travel</h2>
+                    <p>How many kilometres did you travel for business in the last year, by each of these travel methods?<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
+                    <div class="inline-fields">
+                        <label for="bustravelTrain">Train:</label>
+                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">    
+                        <label for="bustravelOV">Bus/tram:</label>
+                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelCar">Petrol/diesel car:</label>
+                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelEV">Electric car:</label>
+                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                </div>
+                <div class="bottom-spacer">
+                    <div class="button-container">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
                     <div class="progress-container">
                         <p>3 of 9</p>
                     </div>
@@ -124,12 +124,12 @@
                     <h2>Personal Flying</h2>
                     <label for="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
                     <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>4 of 9</p>
                     </div>
@@ -155,12 +155,12 @@
                         <label for="perstravelEV">Electric car:</label>
                         <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 15" required>
                     </div>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>5 of 9</p>
                     </div>
@@ -187,12 +187,12 @@
                         <input type="number" id="meat" name="meat" min="0" max="7" placeholder="e.g. 1" required>
                     </div>
                     <div class="warning-message" id="food-warning">Make sure that you select a total of 7 days</div>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>6 of 9</p>
                     </div>
@@ -217,12 +217,12 @@
                     <input type="number" id="elecType" name="elecType" min="0" max="100" placeholder="e.g. 50" required>
                     <label for="householdSize">How many people are in your household?</label>
                     <input type="number" id="householdSize" name="householdSize" min="1" max="10" value="1" placeholder="e.g. 2" required>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>7 of 9</p>
                     </div>
@@ -248,12 +248,12 @@
                         <label for="furniture">Furniture:</label>
                         <input type="number" id="furniture" name="furniture" min="0" placeholder="e.g. 2" required>
                     </div>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>8 of 9</p>
                     </div>
@@ -277,12 +277,12 @@
                             I agree that my replies and my email may be shared with my company.
                         </label>
                     </div>
+                </div>
+                <div class="bottom-spacer">
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="submit">Submit</button>
                     </div>
-                </div>
-                <div class="bottom-spacer">
                     <div class="progress-container">
                         <p>9 of 9</p>
                     </div>
