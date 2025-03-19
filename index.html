@@ -26,7 +26,7 @@
             </div>
             <div class="step" id="step-1">
                 <div class="top-spacer">
-                    <h2>Business Air Travel</h2>
+                    <h2>Business Flying</h2>
                     <label for="busFlights">How many hours did you spend on a plane in the last year for business?</label>
                     <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 15" required>
                     <div class="button-container">
@@ -42,9 +42,24 @@
             </div>
             <div class="step" id="step-2">
                 <div class="top-spacer">
-                    <h2>Personal Air Travel</h2>
-                    <label for="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
-                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
+                    <h2>Other Business Travel</h2>
+                    <p>How many kilometres did you travel for business in the last year, by each of these travel methods?<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
+                    <div class="inline-fields">
+                        <label for="bustravelTrain">Train:</label>
+                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">    
+                        <label for="bustravelOV">Bus/tram:</label>
+                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelCar">Petrol/diesel car:</label>
+                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
+                    </div>
+                    <div class="inline-fields">
+                        <label for="bustravelEV">Electric car:</label>
+                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
+                    </div>
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
@@ -102,24 +117,9 @@
             </div>
             <div class="step" id="step-4">
                 <div class="top-spacer">
-                    <h2>Other Business Transportation</h2>
-                    <p>How many kilometres did you travel in the last year for business by:<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
-                    <div class="inline-fields">
-                        <label for="bustravelTrain">Train?</label>
-                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">    
-                        <label for="bustravelOV">Bus/tram?</label>
-                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">
-                        <label for="bustravelCar">Petrol/diesel car?</label>
-                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
-                    </div>
-                    <div class="inline-fields">
-                        <label for="bustravelEV">Electric car?</label>
-                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
-                    </div>
+                    <h2>Personal Flying</h2>
+                    <label for="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
+                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
                     <div class="button-container">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
@@ -133,22 +133,22 @@
             </div>
             <div class="step" id="step-5">
                 <div class="top-spacer">
-                    <h2>Other Personal Transportation</h2>
-                    <p>How many kilometres did you travel in the last year for personal reasons by:</p>
+                    <h2>Other Personal Travel</h2>
+                    <p>How many kilometres did you travel for personal reasons in the last year, by each of these travel methods?</p>
                     <div class="inline-fields">
-                        <label for="perstravelTrain">Train?</label>
+                        <label for="perstravelTrain">Train:</label>
                         <input type="number" id="perstravelTrain" name="perstravelTrain" min="0" placeholder="e.g. 15" required>
                     </div>
                     <div class="inline-fields">
-                        <label for="perstravelOV">Bus/tram?</label>
+                        <label for="perstravelOV">Bus/tram:</label>
                         <input type="number" id="perstravelOV" name="perstravelOV" min="0" placeholder="e.g. 15" required>
                     </div>
                     <div class="inline-fields">
-                        <label for="perstravelCar">Petrol/diesel car?</label>
+                        <label for="perstravelCar">Petrol/diesel car:</label>
                         <input type="number" id="perstravelCar" name="perstravelCar" min="0" placeholder="e.g. 15" required>
                     </div>
                     <div class="inline-fields">
-                        <label for="perstravelEV">Electric car?</label>
+                        <label for="perstravelEV">Electric car:</label>
                         <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 15" required>
                     </div>
                     <div class="button-container">
