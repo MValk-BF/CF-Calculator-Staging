@@ -164,13 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 heatingUseLabel.innerHTML = 'How many m³ of natural gas did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average natural gas consumption for heating in the EU is 547 m³ per person.">ℹ️</span>';
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
-                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 5770 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
                 break;
             case 'Heating oil':
                 heatingUseLabel.innerHTML = 'How many litres of heating oil did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average heating oil usage in the EU is 589 litres per person.">ℹ️</span>';
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
-                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 5770 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
                 break;
             case 'Electricity':
                 heatingUseInput.style.display = 'none';
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             case "Other or don't know":
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
-                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 5770 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = 'How many kWh of electricity did you use in the last year? <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
                 break;
             default:
                 heatingUseInput.style.display = 'none';
