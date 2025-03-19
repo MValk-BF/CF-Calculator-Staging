@@ -151,6 +151,5 @@ body {
 }
 .warning-message {
     color: red;
-    margin-bottom: 20px;
     display: none;
 }
