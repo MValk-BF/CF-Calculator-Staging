@@ -72,9 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (stepIndex === 9) {
         const shareOption = document.querySelector('input[name="shareOption"]:checked');
         if (!shareOption) {
+            console.log('No share option selected');
             document.getElementById('consent-warning').style.display = 'block';
             isValid = false;
         } else {
+            console.log('Share option selected'); 
             document.getElementById('consent-warning').style.display = 'none';
         }
     }
