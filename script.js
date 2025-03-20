@@ -25,64 +25,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function validateStep(stepIndex) {
-        let isValid = true;
-        const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
-        const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
-        const emailField = document.getElementById('email');
-        const shareOption = document.querySelector('input[name="shareOption"]:checked');
+   function validateStep(stepIndex) {
+    let isValid = true;
+    const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
+    const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
+    const emailField = document.getElementById('email');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Email validation regex
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (stepIndex === 0) {
-            if (!emailRegex.test(emailField.value)) {
-                document.getElementById('email-warning').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('email-warning').style.display = 'none';
-            }
+    if (stepIndex === 0) {
+        if (!emailRegex.test(emailField.value)) {
+            document.getElementById('email-warning').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('email-warning').style.display = 'none';
         }
-        if (stepIndex === 1) {
-            let totalPercentage = 0;
-            percentageFields.forEach(field => {
-                if (field.id !== 'commuteKm') {
-                    totalPercentage += parseInt(field.value) || 0;
-                }
-            });
-            if (totalPercentage !== 100) {
-                document.getElementById('percentage-warning').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('percentage-warning').style.display = 'none';
-            }
-        }
-
-        if (stepIndex === 6) {
-            let totalDays = 0;
-            foodFields.forEach(field => {
-                totalDays += parseInt(field.value) || 0;
-            });
-            if (totalDays !== 7) {
-                document.getElementById('food-warning').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('food-warning').style.display = 'none';
-            }
-        }
-        
-        if (stepIndex === 9) {
-            if (!shareOption) {
-                document.getElementById('consent-warning').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('consent-warning').style.display = 'none';
-            }
-        }
-        
-        return isValid;
     }
 
+    if (stepIndex === 1) {
+        let totalPercentage = 0;
+        percentageFields.forEach(field => {
+            if (field.id !== 'commuteKm') {
+                totalPercentage += parseInt(field.value) || 0;
+            }
+        });
+        if (totalPercentage !== 100) {
+            document.getElementById('percentage-warning').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('percentage-warning').style.display = 'none';
+        }
+    }
+
+    if (stepIndex === 6) {
+        let totalDays = 0;
+        foodFields.forEach(field => {
+            totalDays += parseInt(field.value) || 0;
+        });
+        if (totalDays !== 7) {
+            document.getElementById('food-warning').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('food-warning').style.display = 'none';
+        }
+    }
+
+    if (stepIndex === 9) {
+        const shareOption = document.querySelector('input[name="shareOption"]:checked');
+        if (!shareOption) {
+            document.getElementById('consent-warning').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('consent-warning').style.display = 'none';
+        }
+    }
+
+    return isValid;
+}
+    
     function fillEmptyFields() {
         const numberFields = document.querySelectorAll('input[type="number"]');
         numberFields.forEach(field => {
