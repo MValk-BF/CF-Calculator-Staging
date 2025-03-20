@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
    function validateStep(stepIndex) {
+    console.log('Validating step:', stepIndex); // Debugging statement
     let isValid = true;
     const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
     const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
