@@ -85,6 +85,16 @@ document.addEventListener('DOMContentLoaded', function() {
     return isValid;
 }
     
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateStep(9)) { // Ensure stepIndex is set to 9 for validation
+            // Proceed with form submission logic
+            console.log('Form is valid and ready for submission');
+        } else {
+            console.log('Form validation failed');
+        }
+    });
+    
     function fillEmptyFields() {
         const numberFields = document.querySelectorAll('input[type="number"]');
         numberFields.forEach(field => {
