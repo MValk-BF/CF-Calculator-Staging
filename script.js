@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
    function validateStep(stepIndex) {
-    console.log('Validating step:', stepIndex); // Debugging statement
     let isValid = true;
     const percentageFields = document.querySelectorAll('.step#step-1 input[type="number"]');
     const foodFields = document.querySelectorAll('.step#step-6 input[type="number"]');
@@ -73,11 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (stepIndex === 9) {
         const shareOption = document.querySelector('input[name="shareOption"]:checked');
         if (!shareOption) {
-            console.log('No share option selected');
             document.getElementById('consent-warning').style.display = 'block';
             isValid = false;
         } else {
-            console.log('Share option selected'); 
             document.getElementById('consent-warning').style.display = 'none';
         }
     }
@@ -87,11 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        if (validateStep(9)) { // Ensure stepIndex is set to 9 for validation
-            // Proceed with form submission logic
-            console.log('Form is valid and ready for submission');
+        if (validateStep(9)) {
         } else {
-            console.log('Form validation failed');
         }
     });
     
