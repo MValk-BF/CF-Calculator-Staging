@@ -1,0 +1,22 @@
+{
+  "en": {
+    "title": "Personal Carbon Footprint Calculator",
+    "start": "Start",
+    "next": "Next"
+  },
+  "fr": {
+    "title": "Calculateur d'empreinte carbone personnelle",
+    "start": "Commencer",
+    "next": "Suivant"
+  },
+  "nl": {
+    "title": "Persoonlijke CO2-voetafdrukcalculator",
+    "start": "Starten",
+    "next": "Volgende"
+  },
+  "de": {
+    "title": "Persönlicher CO2-Fußabdruck-Rechner",
+    "start": "Starten",
+    "next": "Weiter"
+  }
+}
