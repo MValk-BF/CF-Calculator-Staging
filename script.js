@@ -223,27 +223,27 @@ document.addEventListener('DOMContentLoaded', function() {
     heatingTypeField.addEventListener('change', function() {
         switch (heatingTypeField.value) {
             case 'Natural gas':
-                heatingUseLabel.innerHTML = '${translations.heatingGas} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average natural gas consumption for heating in the EU is 547 m³ per person.">ℹ️</span>';
+                heatingUseLabel.innerHTML = `${translations.heatingGas} <span class="info-icon" data-title="${translations.naturalGasInfo}">ℹ️</span>`;
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
-                elecUseLabel.innerHTML = '${translations.electricityUse} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = `${translations.electricityUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             case 'Heating oil':
-                heatingUseLabel.innerHTML = '${translations.heatingOil} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average heating oil usage in the EU is 589 litres per person.">ℹ️</span>';
+                heatingUseLabel.innerHTML = `${translations.heatingOil} <span class="info-icon" data-title="${translations.heatingOilInfo}">ℹ️</span>`;
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
-                elecUseLabel.innerHTML = '${translations.electricityUse} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = `${translations.electricityUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             case 'Electricity':
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
-                elecUseLabel.innerHTML = '${translations.electricityUse} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average electricity usage in the EU is 6782 kWh per person (includes electricity for heating).">ℹ️</span>';
+                elecUseLabel.innerHTML = `${translations.electricityUse} <span class="info-icon" data-title="${translations.electricityHeatingInfo}">ℹ️</span>`;
                 break;
             case 'Biofuels':
             case "Other or don't know":
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
-                elecUseLabel.innerHTML = '${translations.electricityUse} <span class="info-icon" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh per person.">ℹ️</span>';
+                elecUseLabel.innerHTML = `${translations.electricityUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             default:
                 heatingUseInput.style.display = 'none';

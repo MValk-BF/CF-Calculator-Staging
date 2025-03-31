@@ -69,6 +69,7 @@ body {
 }
 .form-container .radio-field input {
     width: 16px;
+    margin-bottom: 5px;
 }
 .form-container .button-container {
     display: flex;
