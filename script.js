@@ -195,7 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
             furniture: document.getElementById('furniture').value,
             shareOption: document.querySelector('input[name="shareOption"]:checked').value,
             submissionDate: formattedDate,
-            submissionTime: formattedTime
+            submissionTime: formattedTime,
+            language: urlParams.get("lang") || "en"
         };
         
         // Send form data to parent window
