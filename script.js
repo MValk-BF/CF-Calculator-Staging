@@ -219,6 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const heatingUseLabel = document.querySelector('label[for="heatingUse"]');
     const heatingUseInput = document.getElementById('heatingUse');
     const elecUseLabel = document.querySelector('label[for="elecUse"]');
+    const naturalGasInfo = document.getElementById('naturalGasInfo');
+    const electricityInfo = document.getElementById('electricityInfo');
 
     heatingTypeField.addEventListener('change', function() {
         switch (heatingTypeField.value) {
@@ -226,28 +228,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 heatingUseLabel.innerHTML = `${translations.heatingUse} <span class="info-icon" data-title="${translations.naturalGasInfo}">ℹ️</span>`;
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
+                naturalGasInfo.style.display = 'none';
+                electricityInfo.style.display = 'none';
                 elecUseLabel.innerHTML = `${translations.elecUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             case 'Heating oil':
                 heatingUseLabel.innerHTML = `${translations.heatingOil} <span class="info-icon" data-title="${translations.heatingOilInfo}">ℹ️</span>`;
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
+                naturalGasInfo.style.display = 'none';
+                electricityInfo.style.display = 'none';
                 elecUseLabel.innerHTML = `${translations.elecUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             case 'Electricity':
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
+                naturalGasInfo.style.display = 'none';
+                electricityInfo.style.display = 'none';
                 elecUseLabel.innerHTML = `${translations.elecUse} <span class="info-icon" data-title="${translations.electricityHeatingInfo}">ℹ️</span>`;
                 break;
             case 'Biofuels':
             case "Other or don't know":
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
+                naturalGasInfo.style.display = 'none';
+                electricityInfo.style.display = 'none';
                 elecUseLabel.innerHTML = `${translations.elecUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             default:
                 heatingUseInput.style.display = 'none';
                 heatingUseLabel.style.display = 'none';
+                naturalGasInfo.style.display = 'none';
+                electricityInfo.style.display = 'none';
                 break;
         }
     });
