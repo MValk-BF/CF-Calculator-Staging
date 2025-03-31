@@ -62,6 +62,11 @@ body {
 .form-container .inline-fields input {
     width: 40%;
 }
+.form-container .radio-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .form-container .radio-field input {
     width: 16px;
 }
@@ -152,4 +157,10 @@ body {
 .warning-message {
     color: red;
     display: none;
+}
+.inline-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px; /* Add spacing between the paragraph and the icon */
 }
