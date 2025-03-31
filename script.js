@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 elecUseLabel.innerHTML = `${translations.elecUse} <span class="info-icon" data-title="${translations.electricityInfo}">ℹ️</span>`;
                 break;
             case 'Heating oil':
-                heatingUseLabel.innerHTML = `${translations.heatingOil} <span class="info-icon" data-title="${translations.heatingOilInfo}">ℹ️</span>`;
+                heatingUseLabel.innerHTML = `${translations.heatingOilUse} <span class="info-icon" data-title="${translations.heatingOilInfo}">ℹ️</span>`;
                 heatingUseInput.style.display = 'block';
                 heatingUseLabel.style.display = 'block';
                 naturalGasInfo.style.display = 'none';
