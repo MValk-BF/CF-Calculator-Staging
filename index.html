@@ -15,7 +15,8 @@
                 <div class="top-spacer">
                     <div class="demo-message">
                         <h2 data-i18n="demoHeader">Demo</h2>
-                        <p data-i18n="demoDescription">Log in to explore the demo version and see how our calculator can be used as an awareness-building tool in your organization.<br><br>Make sure to continue to the end and submit your replies to receive a sample report.</p>
+                        <p data-i18n="demoDescription1">Log in to explore the demo version and see how our calculator can be used as an awareness-building tool in your organization.</p>
+                        <p data-i18n="demoDescription2">Make sure to continue to the end and submit your replies to receive a sample report.</p>
                     </div>
                     <h2 data-i18n="emailHeader">Provide your e-mail address to get started</h2>
                     <label for="email" data-i18n="email">Email address</label>
@@ -31,8 +32,8 @@
             <div class="step" id="step-1">
                 <div class="top-spacer">
                     <h2 data-i18n="commutingHeader">Commuting</h2>
-                    <label for="commuteKm" data-i18n="commuteKm">How many kilometres do you live from your workplace? <span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></label>
-                    <p data-i18n="commutePercentage">On average, what percentage of the time do you:</p>
+                    <label for="commuteKm" data-i18n="commuteKm">How many kilometres do you live from your workplace?</label>
+                    <p data-i18n="commutePercentage">On average, what percentage of the time do you:<span class="info-icon" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span></p>
                     <div class="percentage-fields">
                         <div>
                             <label for="commuteHome" data-i18n="commuteHome">Work from home?</label>
@@ -75,6 +76,7 @@
                 <div class="top-spacer">
                     <h2 data-i18n="businessFlyingHeader">Business Flying</h2>
                     <label for="busFlights" data-i18n="busFlights">How many hours did you spend on a plane in the last year for business?</label>
+                    <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 15" required>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">
@@ -89,7 +91,8 @@
             <div class="step" id="step-3">
                 <div class="top-spacer">
                     <h2 data-i18n="otherBusinessTravelHeader">Other Business Travel</h2>
-                    <p data-i18n="otherBusinessTravelDescription">How many kilometres did you travel for business in the last year, by each of these travel methods?<span class="info-icon" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span></p>
+                    <p data-i18n="otherBusinessTravelDescription">How many kilometres did you travel for business in the last year, by each of these travel methods?</p>
+                    <span class="info-icon" data-i18n-title="busTravelInfo" data-title="This includes all business travel that's not part of your regular commute, e.g. for site visits or in-person customer meetings.">ℹ️</span>
                     <div class="inline-fields">
                         <label for="bustravelTrain" data-i18n="bustravelTrain">Train:</label>
                         <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
@@ -121,6 +124,7 @@
                 <div class="top-spacer">
                     <h2 data-i18n="personalFlyingHeader">Personal Flying</h2>
                     <label for="persFlights" data-i18n="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
+                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">
@@ -259,20 +263,21 @@
             <div class="step" id="step-9">
                 <div class="top-spacer">
                     <h2 data-i18n="submitHeader">Submit your responses</h2>
-                    <p data-i18n="submitDescription">All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared. <br><br>If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
+                    <p data-i18n="submitDescription1">All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared.</p>
+                    <p data-i18n="submitDescription2">If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
                     <div class="radio-group">
-                        <label for="shareNone" class="radio-field" data-i18n="shareNone">
+                        <div class="radio-field">
                             <input type="radio" id="shareNone" name="shareOption" value="none">
-                            I do not want to share my replies with my company.
-                        </label>
-                        <label for="shareAnonymous" class="radio-field" data-i18n="shareAnonymous">
+                            <label for="shareNone" data-i18n="shareNone">I do not want to share my replies with my company.</label>
+                        </div>
+                        <div class="radio-field">
                             <input type="radio" id="shareAnonymous" name="shareOption" value="anonymous">
-                            I agree that my replies may be shared with my company anonymously.
-                        </label>
-                        <label for="shareIdentifiable" class="radio-field" data-i18n="shareIdentifiable">
+                            <label for="shareAnonymous" data-i18n="shareAnonymous">I agree that my replies may be shared with my company anonymously.</label>
+                        </div>
+                        <div class="radio-field">
                             <input type="radio" id="shareIdentifiable" name="shareOption" value="identifiable">
-                            I agree that my replies and my email may be shared with my company.
-                        </label>
+                            <label for="shareIdentifiable" data-i18n="shareIdentifiable">I agree that my replies and my email may be shared with my company.</label>
+                        </div>
                     </div>
                     <div class="warning-message" id="consent-warning" data-i18n="consentWarning">Select at least one of the options to proceed</div>
                 </div>

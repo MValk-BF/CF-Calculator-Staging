@@ -12,10 +12,19 @@ async function loadTranslations(lang) {
 }
 
 function applyTranslations() {
+    // Translate elements with data-i18n
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (translations[key]) {
             el.textContent = translations[key];
+        }
+    });
+
+    // Translate data-title attributes for info-icon spans
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const key = el.getAttribute("data-i18n-title");
+        if (translations[key]) {
+            el.setAttribute("data-title", translations[key]);
         }
     });
 
