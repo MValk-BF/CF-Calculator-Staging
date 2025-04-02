@@ -20,6 +20,14 @@ function applyTranslations() {
         }
     });
 
+    // Translate placeholders
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (translations[key]) {
+            el.setAttribute("placeholder", translations[key]);
+        }
+    });
+
     // Translate data-title attributes for info-icon spans
     document.querySelectorAll("[data-i18n-title]").forEach(el => {
         const key = el.getAttribute("data-i18n-title");

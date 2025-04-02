@@ -33,7 +33,7 @@
                 <div class="top-spacer">
                     <h2 data-i18n="commutingHeader">Commuting</h2>
                     <label for="commuteKm" data-i18n="commuteKm">How many kilometres do you live from your workplace?</label>
-                    <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 15" required>
+                    <input type="number" id="commuteKm" name="commuteKm" min="0" placeholder="e.g. 50" data-i18n-placeholder="placeholder50" required>
                     <div class="inline-info">
                         <p data-i18n="commutePercentage">On average, what percentage of the time do you:</p>
                         <span class="info-icon" data-i18n-title="commuteInfo" data-title="For example, if you take the bike to work 1 day per week, but only for the warmest 6 months of the year, that's 1 day per 2 weeks, or 10%">ℹ️</span>
@@ -41,27 +41,27 @@
                     <div class="percentage-fields">
                         <div>
                             <label for="commuteHome" data-i18n="commuteHome">Work from home?</label>
-                            <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteHome" name="commuteHome" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                         <div>
                             <label for="commuteTrain" data-i18n="commuteTrain">Take the train to work?</label>
-                            <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteTrain" name="commuteTrain" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                         <div>
                             <label for="commuteOV" data-i18n="commuteOV">Take the bus/tram to work?</label>
-                            <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteOV" name="commuteOV" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                         <div>
                             <label for="commuteCar" data-i18n="commuteCar">Take the petrol/diesel car to work?</label>
-                            <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteCar" name="commuteCar" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                         <div>
                             <label for="commuteEV" data-i18n="commuteEV">Take the electric car to work?</label>
-                            <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteEV" name="commuteEV" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                         <div>
                             <label for="commuteMove" data-i18n="commuteMove">Walk / cycle to work?</label>
-                            <input type="number" id="commuteMove" name="commuteMove" min="0" max="100" placeholder="e.g. 10" required>
+                            <input type="number" id="commuteMove" name="commuteMove" min="0" max="100" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                         </div>
                     </div>
                     <div class="warning-message" id="percentage-warning" data-i18n="percentageWarning">Make sure that the sum of all percentages is 100%</div>
@@ -80,7 +80,7 @@
                 <div class="top-spacer">
                     <h2 data-i18n="businessFlyingHeader">Business Flying</h2>
                     <label for="busFlights" data-i18n="busFlights">How many hours did you spend on a plane in the last year for business?</label>
-                    <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 15" required>
+                    <input type="number" id="busFlights" name="busFlights" min="0" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">
@@ -101,19 +101,19 @@
                     </div>
                     <div class="inline-fields">
                         <label for="bustravelTrain" data-i18n="bustravelTrain">Train:</label>
-                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="bustravelTrain" name="bustravelTrain" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">    
                         <label for="bustravelOV" data-i18n="bustravelOV">Bus/tram:</label>
-                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="bustravelOV" name="bustravelOV" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">
                         <label for="bustravelCar" data-i18n="bustravelCar">Petrol/diesel car:</label>
-                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="bustravelCar" name="bustravelCar" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">
                         <label for="bustravelEV" data-i18n="bustravelEV">Electric car:</label>
-                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="bustravelEV" name="bustravelEV" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                 </div>
                 <div class="bottom-spacer">
@@ -130,7 +130,7 @@
                 <div class="top-spacer">
                     <h2 data-i18n="personalFlyingHeader">Personal Flying</h2>
                     <label for="persFlights" data-i18n="persFlights">How many hours did you spend on a plane in the last year for personal travel?</label>
-                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 15" required>
+                    <input type="number" id="persFlights" name="persFlights" min="0" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">
@@ -148,19 +148,19 @@
                     <p data-i18n="otherPersonalTravelDescription">How many kilometres did you travel for personal reasons in the last year, by each of these travel methods?</p>
                     <div class="inline-fields">
                         <label for="perstravelTrain" data-i18n="perstravelTrain">Train:</label>
-                        <input type="number" id="perstravelTrain" name="perstravelTrain" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="perstravelTrain" name="perstravelTrain" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">
                         <label for="perstravelOV" data-i18n="perstravelOV">Bus/tram:</label>
-                        <input type="number" id="perstravelOV" name="perstravelOV" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="perstravelOV" name="perstravelOV" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">
                         <label for="perstravelCar" data-i18n="perstravelCar">Petrol/diesel car:</label>
-                        <input type="number" id="perstravelCar" name="perstravelCar" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="perstravelCar" name="perstravelCar" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                     <div class="inline-fields">
                         <label for="perstravelEV" data-i18n="perstravelEV">Electric car:</label>
-                        <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 15" required>
+                        <input type="number" id="perstravelEV" name="perstravelEV" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     </div>
                 </div>
                 <div class="bottom-spacer">
@@ -179,19 +179,19 @@
                     <p data-i18n="foodDescription">On average, how many days per week do you eat:</p>
                     <div class="inline-fields">
                         <label for="vegan" data-i18n="vegan">Vegan?</label>
-                        <input type="number" id="vegan" name="vegan" min="0" max="7" placeholder="e.g. 2" required>
+                        <input type="number" id="vegan" name="vegan" min="0" max="7" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                     </div>
                     <div class="inline-fields">
                         <label for="veggie" data-i18n="veggie">Vegetarian?</label>
-                        <input type="number" id="veggie" name="veggie" min="0" max="7" placeholder="e.g. 2" required>
+                        <input type="number" id="veggie" name="veggie" min="0" max="7" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                     </div>
                     <div class="inline-fields">
                         <label for="fish" data-i18n="fish">Fish?</label>
-                        <input type="number" id="fish" name="fish" min="0" max="7" placeholder="e.g. 2" required>
+                        <input type="number" id="fish" name="fish" min="0" max="7" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                     </div>
                     <div class="inline-fields">
                         <label for="meat" data-i18n="meat">Meat?</label>
-                        <input type="number" id="meat" name="meat" min="0" max="7" placeholder="e.g. 1" required>
+                        <input type="number" id="meat" name="meat" min="0" max="7" placeholder="e.g. 1" data-i18n-placeholder="placeholder1" required>
                     </div>
                     <div class="warning-message" id="food-warning" data-i18n="foodWarning">Make sure that you select a total of 7 days</div>
                 </div>
@@ -220,16 +220,16 @@
                         <label for="heatingUse" data-i18n="heatingUse">How many m3 of natural gas did you use in the last year?</label>
                         <span class="info-icon" id="naturalGasInfo" data-i18n-title="naturalGasInfo" data-title="You should be able to find this information on your yearly utility bills. The yearly average natural gas consumption for heating in the EU is 547 m³ per person.">ℹ️</span>
                     </div>
-                    <input type="number" id="heatingUse" name="heatingUse" min="0" placeholder="e.g. 100" required>
+                    <input type="number" id="heatingUse" name="heatingUse" min="0" placeholder="e.g. 500" data-i18n-placeholder="placeholder500" required>
                     <div class="inline-info">
                         <label for="elecUse" data-i18n="elecUse">How many kWh of electricity did you use in the last year?</label>
                         <span class="info-icon" id="electricityInfo" data-i18n-title="electricityInfo" data-title="You should be able to find this information on your yearly utility bills. The yearly average non-heating electricity usage in the EU is 1012 kWh/year.">ℹ️</span>    
                     </div>
-                    <input type="number" id="elecUse" name="elecUse" min="0" placeholder="e.g. 5000" required>
+                    <input type="number" id="elecUse" name="elecUse" min="0" placeholder="e.g. 5000" data-i18n-placeholder="placeholder5000" required>
                     <label for="elecType" data-i18n="elecType">What % of that electricity is green?</label>
-                    <input type="number" id="elecType" name="elecType" min="0" max="100" placeholder="e.g. 50" required>
+                    <input type="number" id="elecType" name="elecType" min="0" max="100" placeholder="e.g. 50" data-i18n-placeholder="placeholder50" required>
                     <label for="householdSize" data-i18n="householdSize">How many people are in your household?</label>
-                    <input type="number" id="householdSize" name="householdSize" min="1" max="10" value="1" placeholder="e.g. 2" required>
+                    <input type="number" id="householdSize" name="householdSize" min="1" max="10" value="1" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">
@@ -247,19 +247,19 @@
                     <p data-i18n="consumptionDescription">How many new items did you purchase in the last year from each of these categories?</p>
                     <div class="inline-fields">
                         <label for="clothing" data-i18n="clothing">Clothing:</label>
-                        <input type="number" id="clothing" name="clothing" min="0" placeholder="e.g. 10" required>
+                        <input type="number" id="clothing" name="clothing" min="0" placeholder="e.g. 20" data-i18n-placeholder="placeholder20" required>
                     </div>
                     <div class="inline-fields">
                         <label for="smallElec" data-i18n="smallElec">Small electronics:</label>
-                        <input type="number" id="smallElec" name="smallElec" min="0" placeholder="e.g. 5" required>
+                        <input type="number" id="smallElec" name="smallElec" min="0" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                     </div>
                     <div class="inline-fields">
                         <label for="largeElec" data-i18n="largeElec">Large electronics / appliances:</label>
-                        <input type="number" id="largeElec" name="largeElec" min="0" placeholder="e.g. 2" required>
+                        <input type="number" id="largeElec" name="largeElec" min="0" placeholder="e.g. 2" data-i18n-placeholder="placeholder2" required>
                     </div>
                     <div class="inline-fields">
                         <label for="furniture" data-i18n="furniture">Furniture:</label>
-                        <input type="number" id="furniture" name="furniture" min="0" placeholder="e.g. 2" required>
+                        <input type="number" id="furniture" name="furniture" min="0" placeholder="e.g. 1" data-i18n-placeholder="placeholder1" required>
                     </div>
                 </div>
                 <div class="bottom-spacer">
@@ -304,8 +304,8 @@
                 </div>
             </div>
         </form>
-    </div> <!-- DON'T COPY. REPLACE WITH CORRECT WEBHOOK -->
-    <form id="hiddenZapierForm" action="https://hooks.zapier.com/hooks/catch/19923585/2wg52ub/" method="POST">
+    </div>
+    <form id="hiddenZapierForm">
         <input type="hidden" name="email">
         <input type="hidden" name="submissionDate">
         <input type="hidden" name="submissionTime">

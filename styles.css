@@ -57,10 +57,13 @@ body {
     align-items: center;
 }
 .form-container .percentage-fields input {
-    width: 40%;
+    width: 20%;
 }
 .form-container .inline-fields input {
     width: 40%;
+}
+.form-container .radio-group {
+    margin-top: 20px;
 }
 .form-container .radio-field {
     display: flex;
