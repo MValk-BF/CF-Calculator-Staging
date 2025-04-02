@@ -166,5 +166,5 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 5px; /* Add spacing between the paragraph and the icon */
+    gap: 5px;
 }
