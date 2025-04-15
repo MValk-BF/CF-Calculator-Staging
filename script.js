@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (stepIndex === 9) {
         const agreeTerms = document.getElementById('agreeTerms');
-        if (!agreeTerms.checked) {
+        if (!agreeTerms) {
             document.getElementById('consent-warning').textContent = translations.consentWarning;
             document.getElementById('consent-warning').style.display = 'block';
             isValid = false;

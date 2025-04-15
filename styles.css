@@ -73,6 +73,10 @@ body {
 .form-container .checkbox-field input {
     width: 16px;
     margin-bottom: 5px;
+    margin-right: 10px;
+}
+.form-container .checkbox-field label {
+    max-width: 550px;
 }
 .form-container .button-container {
     display: flex;
