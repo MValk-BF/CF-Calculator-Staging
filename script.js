@@ -36,19 +36,6 @@ function applyTranslations() {
         }
     });
 
-    // Update the Terms & Conditions and Privacy Policy links dynamically
-    const termsLink = document.getElementById('termsLink');
-    const privacyLink = document.getElementById('privacyLink');
-
-    if (termsLink && privacyLink) {
-        if (translations.termsLink && translations.privacyLink) {
-            termsLink.href = translations.termsLink;
-            termsLink.textContent = translations.termsText || 'Terms & Conditions';
-            privacyLink.href = translations.privacyLink;
-            privacyLink.textContent = translations.privacyText || 'Privacy Policy';
-        }
-    }
-
     // Update warning messages
     document.getElementById('email-warning').textContent = translations.emailWarning;
     document.getElementById('percentage-warning').textContent = translations.percentageWarning;

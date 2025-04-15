@@ -68,7 +68,7 @@ body {
 .form-container .checkbox-field {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
 }
 .form-container .checkbox-field input {
     width: 16px;
