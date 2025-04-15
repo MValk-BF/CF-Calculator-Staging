@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (stepIndex === 9) {
         const agreeTerms = document.getElementById('agreeTerms');
-        if (!agreeTerms) {
+        if (!agreeTerms.checked) {
             document.getElementById('consent-warning').textContent = translations.consentWarning;
             document.getElementById('consent-warning').style.display = 'block';
             isValid = false;
@@ -134,13 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     return isValid;
 }
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        if (validateStep(9)) {
-        } else {
-        }
-    });
     
     function fillEmptyFields() {
         const numberFields = document.querySelectorAll('input[type="number"]');
@@ -176,6 +169,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentDate = new Date();
         const formattedDate = currentDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
         const formattedTime = currentDate.toTimeString().split(' ')[0]; // Format: HH:MM:SS
+
+        if (validateStep(9)) {
 
         // Gather form data
         const formData = {
@@ -218,7 +213,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Send form data to parent window
         window.parent.postMessage({ type: 'formData', data: formData }, '*');
-
+    } else {
+        // If validation fails, do nothing (form submission is blocked)
+        console.warn('Form validation failed. Please check the required fields.');
+    }
     });
 
     showStep(currentStep);
