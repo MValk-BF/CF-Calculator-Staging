@@ -40,11 +40,13 @@ function applyTranslations() {
     const termsLink = document.getElementById('termsLink');
     const privacyLink = document.getElementById('privacyLink');
 
-    if (translations.termsLink && translations.privacyLink) {
-        termsLink.href = translations.termsLink;
-        termsLink.textContent = translations.termsText || 'Terms & Conditions';
-        privacyLink.href = translations.privacyLink;
-        privacyLink.textContent = translations.privacyText || 'Privacy Policy';
+    if (termsLink && privacyLink) {
+        if (translations.termsLink && translations.privacyLink) {
+            termsLink.href = translations.termsLink;
+            termsLink.textContent = translations.termsText || 'Terms & Conditions';
+            privacyLink.href = translations.privacyLink;
+            privacyLink.textContent = translations.privacyText || 'Privacy Policy';
+        }
     }
 
     // Update warning messages
@@ -134,12 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (stepIndex === 9) {
         const agreeTerms = document.getElementById('agreeTerms');
+        const consentWarning = document.getElementById('consent-warning');
+    
         if (!agreeTerms.checked) {
-            document.getElementById('consent-warning').textContent = translations.consentWarning;
-            document.getElementById('consent-warning').style.display = 'block';
+            consentWarning.style.display = 'block'; // Show the warning message
             isValid = false;
         } else {
-            document.getElementById('consent-warning').style.display = 'none';
+            consentWarning.style.display = 'none'; // Hide the warning message
         }
     }
 
