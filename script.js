@@ -123,13 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (stepIndex === 9) {
         const agreeTerms = document.getElementById('agreeTerms');
-        const consentWarning = document.getElementById('consent-warning');
-    
         if (!agreeTerms.checked) {
-            consentWarning.style.display = 'block'; // Show the warning message
+            document.getElementById('consent-warning').textContent = translations.consentWarning;
+            document.getElementById('consent-warning').style.display = 'block';
             isValid = false;
         } else {
-            consentWarning.style.display = 'none'; // Hide the warning message
+            document.getElementById('consent-warning').style.display = 'none';
         }
     }
 
