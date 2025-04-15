@@ -274,24 +274,25 @@
             </div>
             <div class="step" id="step-9">
                 <div class="top-spacer">
-                    <h2 data-i18n="submitHeader">Submit your responses</h2>
-                    <p data-i18n="submitDescription1">All your answers are kept strictly confidential and will never be shared with your employer without your permission. If you choose not to give permission, your submission will only count toward overall participation rates, and none of your replies will be shared.</p>
-                    <p data-i18n="submitDescription2">If you give permission, you can choose to share your replies anonymously or share them along with your email so your responses can be connected to you. This is not mandatory, and you will still receive a full report on your carbon footprint even if you choose not to share your replies.</p>
-                    <div class="radio-group">
-                        <div class="radio-field">
-                            <input type="radio" id="shareNone" name="shareOption" value="none">
-                            <label for="shareNone" data-i18n="shareNone">I do not want to share my replies with my company.</label>
+                    <h2 data-i18n="submitHeader">Submit to receive your demo report</h2>
+                    <p data-i18n="submitDescription1">When running the campaign with your co-workers, they will be asked in this final step if they want to share their replies with their company (anonymous & aggregated data only). If they refuse to share their replies, they'll still receive a report and their submission will only count toward overall participation rates.</p>
+                    <p data-i18n="submitDescription2">To submit your replies and receive a demo report, please review and confirm your preferences below:</p>
+                    <div class="checkbox-group">
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <label for="agreeTerms" data-i18n="agreeTerms">
+                                I agree to the 
+                                <a href="#" id="termsLink" target="_blank" rel="noopener noreferrer" data-i18n="termsLink">Terms & Conditions</a>
+                                &
+                                <a href="#" id="privacyLink" target="_blank" rel="noopener noreferrer" data-i18n="privacyLink">Privacy Policy</a>.
+                            </label>
                         </div>
-                        <div class="radio-field">
-                            <input type="radio" id="shareAnonymous" name="shareOption" value="anonymous">
-                            <label for="shareAnonymous" data-i18n="shareAnonymous">I agree that my replies may be shared with my company anonymously.</label>
-                        </div>
-                        <div class="radio-field">
-                            <input type="radio" id="shareIdentifiable" name="shareOption" value="identifiable">
-                            <label for="shareIdentifiable" data-i18n="shareIdentifiable">I agree that my replies and my email may be shared with my company.</label>
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="agreeMarketing" name="agreeMarketing">
+                            <label for="agreeMarketing" data-i18n="agreeMarketing">I agree to receive marketing communications from Bigfoot with updates on products and services.</label>
                         </div>
                     </div>
-                    <div class="warning-message" id="consent-warning" data-i18n="consentWarning">Select at least one of the options to proceed</div>
+                    <div class="warning-message" id="consent-warning" data-i18n="consentWarning">You must agree to the Terms & Conditions and Privacy Policy to proceed.</div>
                 </div>
                 <div class="bottom-spacer">
                     <div class="button-container">

@@ -62,15 +62,15 @@ body {
 .form-container .inline-fields input {
     width: 40%;
 }
-.form-container .radio-group {
+.form-container .checkbox-group {
     margin-top: 20px;
 }
-.form-container .radio-field {
+.form-container .checkbox-field {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.form-container .radio-field input {
+.form-container .checkbox-field input {
     width: 16px;
     margin-bottom: 5px;
 }

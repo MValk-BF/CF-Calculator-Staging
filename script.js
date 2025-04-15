@@ -36,6 +36,17 @@ function applyTranslations() {
         }
     });
 
+    // Update the Terms & Conditions and Privacy Policy links dynamically
+    const termsLink = document.getElementById('termsLink');
+    const privacyLink = document.getElementById('privacyLink');
+
+    if (translations.termsLink && translations.privacyLink) {
+        termsLink.href = translations.termsLink;
+        termsLink.textContent = translations.termsText || 'Terms & Conditions';
+        privacyLink.href = translations.privacyLink;
+        privacyLink.textContent = translations.privacyText || 'Privacy Policy';
+    }
+
     // Update warning messages
     document.getElementById('email-warning').textContent = translations.emailWarning;
     document.getElementById('percentage-warning').textContent = translations.percentageWarning;
@@ -122,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (stepIndex === 9) {
-        const shareOption = document.querySelector('input[name="shareOption"]:checked');
-        if (!shareOption) {
+        const agreeTerms = document.getElementById('agreeTerms');
+        if (!agreeTerms.checked) {
             document.getElementById('consent-warning').textContent = translations.consentWarning;
             document.getElementById('consent-warning').style.display = 'block';
             isValid = false;
@@ -210,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
             smallElec: document.getElementById('smallElec').value,
             largeElec: document.getElementById('largeElec').value,
             furniture: document.getElementById('furniture').value,
-            shareOption: document.querySelector('input[name="shareOption"]:checked').value,
+            shareOption: document.getElementById('agreeMarketing').checked ? 'yes' : 'no',
             submissionDate: formattedDate,
             submissionTime: formattedTime,
             language: urlParams.get("lang") || "en"
