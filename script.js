@@ -214,8 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Send form data to parent window
         window.parent.postMessage({ type: 'formData', data: formData }, '*');
     } else {
-        // If validation fails, do nothing (form submission is blocked)
-        console.warn('Form validation failed. Please check the required fields.');
+        console.log('Form validation failed. Please check the required fields.');
     }
     });
 
